@@ -10,7 +10,7 @@
 
     <header>
         <h1 class="centered-title">Cifra de César</h1>
-        <h2 class="subtitle">A cifra de César foi nomeada em homenagem a Júlio César que, segundo Suetónio, a usava com uma troca de três posições para proteger mensagens de significado militar. </h2>
+        <h2 class="subtitle">A cifra de César foi nomeada em homenagem a Júlio César que, segundo Suetónio, a usava com uma troca de três posições para proteger mensagens de significado militar.</h2>
     </header>
 
     <section class="centered-section">
@@ -19,28 +19,39 @@
                 <label for="mensagem">Mensagem</label>
                 <textarea id="mensagem" placeholder="Digite sua mensagem..."></textarea>
                 <div class="counter-container">
-                    <label for="counter">Chave para codificar:</label>
+                    <label for="counter">Chave para codificar (1-26):</label>
                     <input type="number" id="counter" min="1" max="26" />
                 </div>
-                <button>Codificar</button>
+                <div class="button__left">
+                <button>Criptografar</button>
+                <button>Descriptografar</button>
+            </div>
             </div>
             <div class="half-width">
-                <label for="codigo">Mensagem codificada</label>
-                <textarea id="codigo" placeholder="Mensagem Cifrada..."></textarea>
-                <div class="counter-container">
-                    <label for="counter2">Chave para decodificar:</label>
-                    <input type="number" id="counter2" min="1" max="26" />
+                <div class="code-container">
+                    <label for="codigo">Mensagem codificada</label>
+                    <div id="codigo" class="encrypted-message">Initial Content</div>
+                    <button class="button__copy" onclick="copyText()">Copiar texto</button>
                 </div>
-                
-                <button>Decodificar</button>
             </div>
         </div>
     </section>
 
     <footer>
-<p>Copyright 2024</p>    
+        <p>Copyright 2024</p>
+    </footer>
 
-</footer>
+    <script>
+        function copyText() {
+            var codeContainer = document.getElementById("codigo");
+            var range = document.createRange();
+            range.selectNode(codeContainer);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+        }
+    </script>
 
 </body>
 </html>

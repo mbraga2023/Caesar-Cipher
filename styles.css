@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -30,20 +32,23 @@ header {
 }
 
 .half-width {
-    width: 45%; /* Reduced width to accommodate space between elements */
+    width: 45%;
     box-sizing: border-box;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 1rem;
 }
 
 textarea {
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 10px;
+    height: 50%; 
 }
 
 .counter-container {
@@ -56,8 +61,18 @@ textarea {
     margin-right: 10px;
 }
 
+.half-width .button__left {
+    display: flex;
+    width: 100%;
+}
+
+.half-width button {
+    flex: 1;
+    margin-right: 2%; 
+}
+
 button {
-    display: block;
+    display: flex;
     width: 100%;
     padding: 10px;
     background-color: #4CAF50;
@@ -65,6 +80,24 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.button__copy{
+margin-top: 3rem;
+}
+
+.code-container {
+    display: flex;
+    flex-direction: column;
+    height: 50%; 
+}
+
+#codigo {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 5px;
+    height: 100%; 
 }
 
 footer {
