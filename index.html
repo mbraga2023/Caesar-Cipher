@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Cifra de César</title>
 </head>
 <body>
-    <header>Título</header>
+
+    <header>
+        <h1 class="centered-title">Cifra de César</h1>
+        <h2 class="subtitle">A cifra de César foi nomeada em homenagem a Júlio César que, segundo Suetónio, a usava com uma troca de três posições para proteger mensagens de significado militar. </h2>
+    </header>
+
+    <section class="centered-section">
+        <div class="content-container">
+            <div class="half-width">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" placeholder="Digite sua mensagem..."></textarea>
+                <div class="counter-container">
+                    <label for="counter">Chave para codificar:</label>
+                    <input type="number" id="counter" min="1" max="26" />
+                </div>
+                <button>Codificar</button>
+            </div>
+            <div class="half-width">
+                <label for="codigo">Mensagem codificada</label>
+                <textarea id="codigo" placeholder="Mensagem Cifrada..."></textarea>
+                <div class="counter-container">
+                    <label for="counter2">Chave para decodificar:</label>
+                    <input type="number" id="counter2" min="1" max="26" />
+                </div>
+                
+                <button>Decodificar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+<p>Copyright 2024</p>    
+
+</footer>
+
 </body>
 </html>
