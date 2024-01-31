@@ -16,11 +16,10 @@
     <section class="centered-section">
         <div class="content-container">
             <div class="half-width">
-                <label for="mensagem">Mensagem</label>
                 <textarea id="mensagem" placeholder="Digite sua mensagem..."></textarea>
                 <div class="counter-container">
                     <label for="counter">Chave para codificar (1-26):</label>
-                    <input type="number" id="counter" min="1" max="26" />
+                    <input type="number" id="counter" min="1" max="26" placeholder="1-26"/>
                 </div>
                 <div class="button__left">
                 <button>Criptografar</button>
@@ -29,8 +28,10 @@
             </div>
             <div class="half-width">
                 <div class="code-container">
-                    <label for="codigo">Mensagem codificada</label>
-                    <div id="codigo" class="encrypted-message">Initial Content</div>
+                    <div id="codigo" class="encrypted-message">
+                        <p aria-placeholder="Mensagem codificada">
+
+                        </p></div>
                     <button class="button__copy" onclick="copyText()">Copiar texto</button>
                 </div>
             </div>

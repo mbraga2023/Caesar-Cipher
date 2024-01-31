@@ -1,111 +1,205 @@
-/* styles.css */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&display=swap');
+  @import url('https://fonts.cdnfonts.com/css/isidora');
 
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-}
+  body {
+      background-color: #e7f997;
+  }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #eee;
-}
+  header {
+      text-align: center;
+  }
 
-.centered-title {
-    display: inline-block;
-    border: 2px solid #333;
-    padding: 10px;
-}
+  .centered-title {
+      font-size: 4rem;
+      font-family: 'Montserrat Subrayada', sans-serif;
+      color: #0262D3;
+      -webkit-text-stroke: 0.1px black;
+      /* Webkit browsers */
+      text-stroke: 0.1px black;
+      /* Other browsers */
+      letter-spacing: 5px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
 
-.subtitle {
-    color: #666;
-    margin-top: 5px;
-}
 
-.centered-section {
-    text-align: center;
-}
+  .subtitle {
+      color: #000000;
+      font-family: 'Isidora', sans-serif;
+      font-size: 1.5rem;
+      max-width: 750px;
+      margin: auto;
+      /* Horizontal centering */
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      /* Vertical centering */
+      justify-content: center;
+      /* Horizontal centering within flex container */
+  }
 
-.content-container {
+
+  .content-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+  }
+
+
+  .half-width {
+      width: 45%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+  }
+
+  textarea {
+      width: 100%;
+      height: 10rem;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      border: 1px solid #C4C4C4;
+      border-radius: 20px;
+      background-color: #FCFCFC;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      resize: none;
+      font-family: 'Isidora', sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .counter-container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin-top: 10px;
+  }
+
+  .counter-container label {
+      margin-bottom: 5px;
+      font-family: 'Isidora', sans-serif;
+    
+  }
+
+  .counter-container input {
+      width: 100%;
+      box-sizing: border-box;
+      height: 2rem;
+      border: 1px solid #79747E;
+      border-radius: 5px;
+      padding: 0.5rem;
+      color: #55555A;
+      font-family: 'Isidora', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 20px;
+  }
+
+  /* Add a style for the "X" mark */
+  .counter-container input::-webkit-clear-button {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: transparent;
+      color: #55555A;
+      font-family: 'Isidora', sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+  }
+
+  .counter-container input::-ms-clear {
+      display: none;
+  }
+
+
+  .half-width .button__left {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      gap: 1%;
+  }
+
+  .half-width button {
+      flex: 1;
+  }
+
+  button {
+      display: flex;
+      max-width: 20%;
+      padding: 10px;
+      background-color: #424B5A;
+      color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family: 'Isidora', sans-serif;
+      font-size: 1rem;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .button__copy {
     display: flex;
-    justify-content: space-around;
-}
-
-.half-width {
-    width: 45%;
-    box-sizing: border-box;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    display: block;
-    margin-bottom: 1rem;
-}
-
-textarea {
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    height: 50%; 
-}
-
-.counter-container {
-    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+    max-width: 30%;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Isidora', sans-serif;
+    font-size: 1rem;
     align-items: center;
-    margin-top: 10px;
-}
-
-.counter-container label {
-    margin-right: 10px;
-}
-
-.half-width .button__left {
-    display: flex;
-    width: 100%;
-}
-
-.half-width button {
-    flex: 1;
-    margin-right: 2%; 
-}
-
-button {
-    display: flex;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    border: #446B8D;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    margin-left: auto; 
 }
 
-.button__copy{
-margin-top: 3rem;
-}
-
-.code-container {
-    display: flex;
-    flex-direction: column;
-    height: 50%; 
-}
-
-#codigo {
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    padding: 5px;
-    height: 100%; 
-}
-
-footer {
-    width: 100%;
+button:hover {
     background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+    color: #fff;
 }
+
+.button__copy:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+
+  .code-container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      height: 10rem;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      border: 1px solid #ECB140;
+      border-radius: 20px;
+      background-color: #FCFCFC;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      font-family: 'Isidora', sans-serif;
+font-size: 1.5rem;
+  }
+
+
+  #codigo {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      padding: 5px;
+      height: 100%;
+  }
+
+  footer {
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+  }
