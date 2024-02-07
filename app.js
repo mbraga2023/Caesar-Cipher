@@ -78,3 +78,7 @@ function copyText() {
     }, 4000);
 }
 
+function limpar() {
+    document.getElementById("mensagem").value = ""; // Clears the input field
+  }
+

@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Cifra de César</title>
 </head>
+
 <body>
 
     <header>
-        <h1 class="centered-title">Cifra de César</h1>
-        <h2 class="subtitle">Antiga técnica criptográfica de Júlio César, imperador romano, desloca letras por número fixo para proteger mensagens.</h2>
+
+        <nav>
+            <img class="logo-nav" src="/img/OIP.jpg" alt="Logo">
+            <p class="nav-text">Desafio Alura</p>
+        </nav>
+
+        <h1 class="centered-title">César</h1>
+        <h2 class="subtitle">Antiga técnica criptográfica de Júlio César, imperador romano, desloca letras por número
+            fixo para proteger mensagens.</h2>
     </header>
 
     <div id="snackbar"></div>
@@ -18,38 +27,46 @@
     <section class="centered-section">
         <div class="content-container">
             <div class="half-width">
-                <textarea id="mensagem" placeholder="Digite sua mensagem..."></textarea>
+                <div class="mensagem-container">
+                    <div>
+                        <textarea id="mensagem" placeholder="Digite sua mensagem..."></textarea>
+                    </div>
+                    <button class="button__clean" onclick="limpar()">Limpar</button>
+
+                </div>
                 <div class="counter-container">
-                    <label for="counter">Chave para codificar (1-26):</label>
-                    <input type="number" id="counter" min="0" max="26" placeholder="1-26"/>
+                    <label for="counter">Chave da codificação (1-26):</label>
+                    <input type="number" id="counter" min="0" max="26" placeholder="1-26" />
                     <p id="error-message"></p>
                 </div>
-                
+
                 <div class="button__left">
                     <button id="criptografar">Criptografar</button>
                     <button id="descriptografar">Descriptografar</button>
-            </div>
+                </div>
             </div>
             <div class="half-width">
                 <div class="code-container">
                     <div id="codigo" class="encrypted-message">
                         <p aria-placeholder="Mensagem codificada">
 
-                        </p></div>
-                    <button class="button__copy" onclick="copyText()">Copiar texto</button>
+                        </p>
+                    </div>
+                    <button class="button__copy" onclick="copyText()">Copiar</button>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>Copyright 2024</p>
+        <p>Copyright Michel Diener Braga - 2024</p>
     </footer>
 
 
 
-<script src="app.js" defer></script>
+    <script src="app.js" defer></script>
 
 
 </body>
+
 </html>
