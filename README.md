@@ -1,7 +1,5 @@
 # Cifra de César
 
-![Logo](/img/OIP.jpg)
-
 **Desafio Alura - Decodificador de Texto**
 
 ## Visão Geral
