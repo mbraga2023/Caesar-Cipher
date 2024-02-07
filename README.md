@@ -10,7 +10,6 @@ A Cifra de César é uma antiga técnica criptográfica atribuída a Júlio Cés
 
 - Criptografe e descriptografe mensagens usando a técnica da Cifra de César.
 - Copie a mensagem criptografada para a área de transferência.
-- Design responsivo para diversos dispositivos.
 
 ## Utilização
 
