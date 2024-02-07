@@ -43,7 +43,7 @@ nav .logo-nav {
 nav {
     margin: 0;
     text-align: start;
-    font-size: 2rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
 }
