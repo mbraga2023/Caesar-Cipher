@@ -34,12 +34,6 @@ body {
     margin: 0;
 }
 
-nav .logo-nav {
-    max-height: 50px;
-    margin-right: 10px;
-}
-
-
 nav {
     margin: 0;
     text-align: start;
@@ -48,10 +42,7 @@ nav {
 }
 
 .nav-text {
-    margin-left: 3%;
     font-size: 1rem;
-font-weight: 600;
-padding: 10px;
 }
 
 nav,
@@ -61,6 +52,10 @@ footer {
 
 }
 
+.logo-img{
+    max-height: 2rem;
+    margin-left: 3%;
+}
 
 header {
     text-align: center;
@@ -126,7 +121,6 @@ textarea {
     overflow: hidden;
     resize: none;
     font-size: 1rem;
-    margin-bottom: -1rem;
     border: none;
 
 }
@@ -188,7 +182,6 @@ button,
 .button__clean {
     display: flex;
     justify-content: flex-end;
-    margin-top: 3rem;
     color: var(--button-text-color);
     font-size: 1rem;
     align-items: center;
@@ -203,12 +196,15 @@ button,
 .button__copy {
     background-color: var(--button-copy-background);
     color: var(--button-copy-text-color);
-
+    margin-top: auto; 
+    margin-bottom: 0; 
 }
+
 
 .button__clean {
     background-color: var(--button-clean-background);
     color: var(--button-copy-text-color);
+    margin-top: 1.7rem; 
 }
 
 button:hover,
@@ -233,14 +229,21 @@ button:hover,
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     font-size: 1rem;
+    
 }
 
+#codigo p {
+    word-wrap: break-word;
+    max-width: 100%; 
+    margin: 0; 
+}
 
-#codigo {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 5px;
-    height: 100%;
+#codigo p::before {
+    content: attr(placeholder);
+    color: #a0a0a0; 
+    position: absolute;
+    pointer-events: none;
+    margin-bottom: 3rem;
 }
 
 footer {
@@ -300,5 +303,22 @@ footer {
     to {
         bottom: 0;
         opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .content-container {
+        flex-direction: column;
+        margin: 10%;
+    }
+
+    .half-width {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .subtitle {
+        margin: 10%;
+   
     }
 }
